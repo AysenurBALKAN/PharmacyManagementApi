@@ -17,4 +17,10 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PBusinessLayer\PBusinessLayer.csproj" />
+    <ProjectReference Include="..\PDataAccessLayer\PDataAccessLayer.csproj" />
+    <ProjectReference Include="..\PEntityLayer\PEntityLayer.csproj" />
+  </ItemGroup>
+
 </Project>
