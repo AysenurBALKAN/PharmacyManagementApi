@@ -26,6 +26,7 @@ namespace PharmacyManagementApi
         {
 
             services.AddControllers();
+            services.AddSwaggerDocument();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -37,7 +38,8 @@ namespace PharmacyManagementApi
             }
 
             app.UseRouting();
-
+            app.UseOpenApi();
+            app.UseSwaggerUi();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
