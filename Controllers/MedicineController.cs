@@ -15,11 +15,12 @@ namespace PharmacyManagementApi.Controllers
     public class MedicineController : ControllerBase
     {
 
-        MedicineManager cm = new MedicineManager(new EfMedicine());
+  MedicineManager cm = new MedicineManager(new EfMedicine());
 
         [HttpGet]
         public IActionResult MedicineList()
         {
+            MedicineManager cm = new MedicineManager(new EfMedicine());
             var values = cm.TGetList();
             return Ok(values);
         }
@@ -27,6 +28,7 @@ namespace PharmacyManagementApi.Controllers
         [HttpPost]
         public IActionResult MedicineAdd(MedicineInfo t)
         {
+            MedicineManager cm = new MedicineManager(new EfMedicine());
             cm.TAdd(t);
             return Ok();
         }
